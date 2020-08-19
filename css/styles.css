@@ -94,7 +94,6 @@ p {
 .btn {
   text-transform: uppercase;
   background: transparent;
-  color: black;
   padding: 0.375rem 0.75rem;
   letter-spacing: 2px;
   display: inline-block;
@@ -143,6 +142,17 @@ nav .links a:hover {
   text-decoration: none;
 }
 
+nav .links-social {
+  display: inline-flex;
+  text-indent: 20px;
+  margin-top: 20px;
+}
+
+nav .links-social a:hover {
+  color: rgb(4, 169, 175);
+  text-decoration: none;
+}
+
 /* fixed nav */
 .fixed-nav {
   position: fixed;
@@ -159,6 +169,14 @@ nav .links a:hover {
   color: rgb(4, 169, 175);
 }
 
+.fixed-nav .links-social a {
+  color: grey;
+}
+
+.fixed-nav .links-social a:hover {
+  color: rgb(4, 169, 175);
+}
+
 /* .fixed-nav .links-container {
   height: auto !important;
 } */
@@ -170,10 +188,12 @@ nav .links a:hover {
 .nav-toggle {
   font-size: 1.5rem;
   color: grey;
-  background: transparent;
+  background: white;
   border-color: transparent;
   transition: 2px 2px #575757;
   cursor: pointer;
+  border: none;
+  display: invert;
 }
 .nav-toggle:hover {
   color: rgb(4, 169, 175);
@@ -191,7 +211,7 @@ nav .links a:hover {
 }
 .links a {
   background: white;
-  color: var(--clr-grey-5);
+  color: grey;
   font-size: 1.1rem;
   text-transform: capitalize;
   letter-spacing: 2px;
@@ -201,6 +221,27 @@ nav .links a:hover {
   padding: 0.75rem 0;
 }
 .links a:hover {
+  color: rgb(4, 169, 175);
+}
+
+.links-social-container {
+  height: 0;
+  overflow: auto;
+  text-shadow: 2px 2px #e2e2e2;
+}
+
+.links-social a {
+  background: white;
+  color: grey;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  display: flex;
+  transition: rgb(4, 169, 175);
+  font-weight: bold;
+  padding: 0.75rem 0;
+}
+
+.links-social a:hover {
   color: rgb(4, 169, 175);
 }
 
@@ -221,6 +262,7 @@ nav .links a:hover {
   }
   .nav-toggle {
     display: none;
+    border: none;
   }
   .links-container {
     height: auto !important;
@@ -241,7 +283,33 @@ nav .links a:hover {
     padding: 0;
   }
   .links a:hover {
-    color: var(--clr-white);
+    color: white;
+  }
+
+  .links-container {
+    height: auto !important;
+  }
+  .links-social {
+    display: inline-flex;
+  }
+  .links-social a {
+    background: transparent;
+    color: white;
+    font-size: 1.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    display: flex;
+    transition: rgb(4, 169, 175);
+    margin: 0 0.75rem;
+    font-weight: bold;
+    padding: 0;
+  }
+  .links-social a:hover {
+    color: white;
+  }
+
+  .links-social-container {
+    height: auto !important;
   }
 }
 
@@ -267,18 +335,39 @@ header {
   text-align: center;
 }
 
-.container h1 {
+@media screen and (min-width: 768px) {
+  .container h1 {
+    font-size: 55px;
+    color: white;
+    text-shadow: 2px 2px grey;
+    text-transform: uppercase;
+  }
+}
+
+/* .container h1 {
+  font-size: 45px;
   color: white;
   text-shadow: 2px 2px grey;
   text-transform: uppercase;
+} */
+
+@media screen and (min-width: 768px) {
+  .container p {
+    color: white;
+    max-width: 50rem;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+  }
 }
-.container p {
+
+/* .container p {
   color: white;
   max-width: 50rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
   font-weight: 500;
-}
+} */
 
 .banner .container p {
   margin-top:20px;
@@ -294,6 +383,12 @@ header {
   color: rgb(0, 225, 255);
   text-shadow: 2px 2px 575757;
   font-size: 20px;
+}
+
+.banner .container .row i {
+  text-align: center;
+  color: rgb(175, 175, 175);
+  text-shadow: 2px 2px rgb(219, 219, 219);
 }
 
 @media screen and (min-width: 768px) {
@@ -335,6 +430,16 @@ header {
   margin-top: 25px;
 }
 
+.services .container p {
+  color: black;
+  font-weight: bold;
+}
+
+.services .container h5 {
+  color: black;
+  font-weight: bold;
+}
+
 .services .row {
   margin-top:25px;
 }
@@ -362,6 +467,17 @@ footer p {
 .portfolio .container a img:hover{
   opacity: 0.5;
   transition: .5s ease;
+}
+
+.btn-new {
+  border: solid;
+  border-radius: 30px;
+  padding: 5px 20px 5px 20px;
+  text-shadow: 2px 2px rgb(218, 218, 218)
+}
+
+.btn-new:hover {
+  background-color:rgb(119, 250, 250);
 }
 
 .top-link {

@@ -14,8 +14,6 @@ const linksContainer = document.querySelector(".links-container");
 const links = document.querySelector(".links");
 
 navToggle.addEventListener("click", () => {
-
-
   const linksHeight = links.getBoundingClientRect().height;
   const containerHeight = linksContainer.getBoundingClientRect().height;
   if (containerHeight === 0) {
@@ -42,7 +40,7 @@ window.addEventListener("scroll", () => {
   // setup back to top link
 
   if (scrollHeight > 500) {
-    console.log("helo");
+    console.log("hello");
 
     topLink.classList.add("show-link");
   } else {
